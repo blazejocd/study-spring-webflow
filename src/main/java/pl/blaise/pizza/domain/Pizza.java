@@ -1,6 +1,7 @@
 package pl.blaise.pizza.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("serial")
@@ -8,6 +9,11 @@ public class Pizza implements Serializable
 {
 	private PizzaSize size;
 	private List<Topping> toppings;
+	
+	public Pizza()
+	{
+		toppings = new ArrayList<>();
+	}
 	
 	public PizzaSize getSize() {
 		return this.size;

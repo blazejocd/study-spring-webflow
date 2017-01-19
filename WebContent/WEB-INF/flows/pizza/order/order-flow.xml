@@ -2,8 +2,9 @@
 <flow
 	xmlns="http://www.springframework.org/schema/webflow"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/webflow
-		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
 >
 	<input name="order" required="true" />
 	
@@ -17,7 +18,7 @@
 		<on-entry>
 			<set name="flowScope.pizza" value="new pl.blaise.pizza.domain.Pizza()" />
 			<evaluate result="viewScope.toppingsList" 
-				expression="T(pl.blaise.pizza.domain.Topping).asList())" />
+				expression="T(pl.blaise.pizza.domain.Topping).asList()" />
 		</on-entry>
 		<transition on="addPizza" to="showOrder">
 			<evaluate expression="order.addPizza(flowScope.pizza)" />

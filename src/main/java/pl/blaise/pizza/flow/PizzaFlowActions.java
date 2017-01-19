@@ -42,7 +42,7 @@ public class PizzaFlowActions
 		return "31480".equals(zipCode);
 	}
 	
-	public void addCustomer()
+	public void addCustomer(Customer customer)
 	{
 		LOGGER.warn("TODO: Flash out the addCustomer() method.");
 	}
