@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h2>Thank you for your order!</h2>
-	<a href="${flowExecutionUrl}&eventId=finished">Finish</a>
+	<a href="${flowExecutionUrl}&_eventId=finished">Finish</a>
 </body>
 </html>

@@ -23,7 +23,7 @@
 	</c:if>
 	<c:forEach items="${order.pizzas }" var="pizza">
 		<li>${pizza.size }:
-			<c:forEach items="${order.toppings}" var="topping">
+			<c:forEach items="${pizza.toppings}" var="topping">
 				<c:out value="${topping }" />
 			</c:forEach>
 		</li>
@@ -31,7 +31,7 @@
 	<form:form>
 		<input type="hidden" name="_flowExecutionKey"
 			value="${flowExecutionKey }" />
-		<input type="submit" name="_ebentId_createPizza" value="Create Pizza" />
+		<input type="submit" name="_eventId_createPizza" value="Create Pizza" />
 		<c:if test="${fn:length(order.pizzas) gt 0 }">
 			<input type="submit" name="_eventId_checkout" value="Checkout" />
 		</c:if>
